@@ -28,11 +28,11 @@
 <?php 
 
 
-    if (isset($_POST['submit'])) {
+    if (isset($_POST['submit'])):
     $quantidade = $_POST['quantidade'];
     
     //criar os objetos dependendo da quantidade
-	for ($i=0; $i<$quantidade; $i++) { 
+	for ($i=0; $i<$quantidade; $i++):
 		$Obj = array();
 		$Obj[$i] = new Dados;
 
@@ -44,6 +44,12 @@
 		*/
 		$imprime="<p class=".$Obj[$i]->getForma()." ";
 		$imprime.= "style=\"border-bottom-color:".$Obj[$i]->getCores().";";
+		
+		if ($Obj[$i]->getForma()!="triangulo"||"trapezio" ):
+
+		$imprime.= "background:".$Obj[$i]->getCores().";";
+		endif;
+		
 		$imprime.= "position:relative; ";
 		$imprime.= "top:0; botton:".$Obj[$i]->getPosicaoy().";";
 		$imprime.= "left:".$Obj[$i]->getPosicaox().";\"></p>";
@@ -52,8 +58,8 @@
 		
 
 
-	}
-    }
+	endfor;
+    endif;
 
  ?>
 

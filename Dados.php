@@ -52,9 +52,8 @@ class Dados {
         $formato[5] = "losango";
         $formato[6] = "trapezio";
         $formato[7] = "elipse";
-        $formato[8] = "triangulo2";
 
-        $form = $formato[mt_rand(1, 8)];
+        $form = $formato[mt_rand(1, 7)];
         $this->forma = $form;
     }
 
@@ -70,8 +69,10 @@ class Dados {
         $cores[6]="#000080";//azul
         $cores[7]="#696969";//cinza
         $cores[8]=" #FF0000";//vermelho
+        $cores[9]=" #DDA0DD";//Plum 
+        $cores[10]="#00FFFF";//azul claro   
 
-        $cor= $cores[mt_rand(1, 8)];
+        $cor= $cores[mt_rand(1, 10)];
         $this->cores = $cor;
     }
 
