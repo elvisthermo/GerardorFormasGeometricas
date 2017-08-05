@@ -44,13 +44,13 @@
 		*/
 		$imprime="<p class=".$Obj[$i]->getForma()." ";
 		
-		if ($Obj[$i]->getForma()=="triangulo"||$Obj[$i]->getForma()=="trapezio" ){
+		if ($Obj[$i]->getForma()=="triangulo"||$Obj[$i]->getForma()=="trapezio" ):
 
 		$imprime.= "style=\"border-bottom-color:".$Obj[$i]->getCores().";";
 	
-		}else{
+		else:
 		$imprime.= "style=\"background:".$Obj[$i]->getCores().";";
-		}
+		endif;
 
 		$imprime.= "position:relative; ";
 		$imprime.= "top:0; botton:".$Obj[$i]->getPosicaoy().";";
